@@ -24,11 +24,7 @@ module m_seq
 	output	reg						data_vld
 );
 
-reg [3:0]	data_count;
-
-initial begin
-	data_count	<=	4'b1001	;
-end
+reg [3:0]	data_count = 4'b1000	;
 
 
 always @ (posedge clk or posedge rst)
@@ -37,12 +33,13 @@ begin
 	begin
 		data_out	<=	1'b0;
 		data_vld	<=	1'b0;
+		data_count	<=	4'b1000	;
 	end
 	else if (en)
 	begin
-		data_out	<=	data_count[3];
-		data_count[3:1]	<=	data_count[2:0];
-		data_count[0]	<=	data_count[0] ^ data_count[3];
+		data_out	<=	data_count[0];
+		data_count[2:0]	<=	data_count[3:1];
+		data_count[3]	<=	data_count[0] ^ data_count[3];
 		data_vld	<=	1'b1;
 	end
 	else
@@ -51,4 +48,4 @@ begin
 	end
 end
 
-endmodule 
+endmodule

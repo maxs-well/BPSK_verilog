@@ -12,11 +12,6 @@ output	reg					en
 
 reg [31:0] count;
 
-initial begin
-	count	<=	'd0;
-	en	<=	1'b0;
-end
-
 always @ (posedge clk or posedge rst)
 begin
 	if (rst)
