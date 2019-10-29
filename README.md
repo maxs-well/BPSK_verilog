@@ -12,3 +12,5 @@ BPSK verilog implemention
 # 欢迎关注微信公众号bugrec, 知乎专栏bugrec
 [知乎专栏bugrec](https://zhuanlan.zhihu.com/BugRec) \
 ![微信号：bugrec](https://github.com/maxs-well/BPSK_verilog/blob/master/pic/wechat.jpg)<br/>
+微信号：bugrec \
+欢迎通过各种渠道与我交流学习！
